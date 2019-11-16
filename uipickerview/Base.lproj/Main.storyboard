@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="See-rl-2uY">
-                                <rect key="frame" x="0.0" y="225.5" width="375" height="216"/>
+                                <rect key="frame" x="0.0" y="226" width="375" height="216"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="216" id="d2F-oL-UVn"/>
                                 </constraints>
@@ -43,7 +43,7 @@
         <!--View Controller-->
         <scene sceneID="iaR-Gp-lD2">
             <objects>
-                <viewController id="nTu-f1-GmK" sceneMemberID="viewController">
+                <viewController id="nTu-f1-GmK" customClass="SPViewController" customModule="uipickerview" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cc3-Fz-ONN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
