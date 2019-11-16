@@ -47,14 +47,46 @@
                     <view key="view" contentMode="scaleToFill" id="cc3-Fz-ONN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99Q-Ej-MM2">
+                                <rect key="frame" x="99.5" y="94" width="176" height="82"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="Oco-c4-PkW"/>
+                                    <constraint firstAttribute="width" constant="176" id="Zcs-Hs-Vhx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NzG-Zd-Ofs">
+                                <rect key="frame" x="99.5" y="206" width="176" height="82"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="GGF-5m-Dg4"/>
+                                    <constraint firstAttribute="width" constant="176" id="aII-EZ-2aj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="99Q-Ej-MM2" firstAttribute="top" secondItem="le5-Y4-V62" secondAttribute="top" constant="50" id="3IB-RJ-k1n"/>
+                            <constraint firstItem="NzG-Zd-Ofs" firstAttribute="top" secondItem="99Q-Ej-MM2" secondAttribute="bottom" constant="30" id="cbf-5q-3e4"/>
+                            <constraint firstItem="NzG-Zd-Ofs" firstAttribute="centerX" secondItem="cc3-Fz-ONN" secondAttribute="centerX" id="mL2-Rg-G77"/>
+                            <constraint firstItem="99Q-Ej-MM2" firstAttribute="centerX" secondItem="cc3-Fz-ONN" secondAttribute="centerX" id="vbG-hT-Eor"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="le5-Y4-V62"/>
                     </view>
                     <navigationItem key="navigationItem" id="hsP-Ao-DUb"/>
+                    <connections>
+                        <outlet property="label1" destination="99Q-Ej-MM2" id="QDb-eF-Okn"/>
+                        <outlet property="label2" destination="NzG-Zd-Ofs" id="SgF-tn-Fqb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UnU-4G-qpd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2310" y="-347"/>
+            <point key="canvasLocation" x="2309.5999999999999" y="-347.67616191904051"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1xS-7C-rYa">
@@ -71,6 +103,13 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w6N-jL-97V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6QU-bn-wpa">
+                    <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </objects>
             <point key="canvasLocation" x="93.599999999999994" y="-22.03898050974513"/>
         </scene>

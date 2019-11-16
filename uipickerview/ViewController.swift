@@ -26,6 +26,13 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
  
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! SPViewController
+        nextVC.ast = selectedAst ?? ""
+        nextVC.bld = selectedBloud ?? ""
+    }
+    
+    
     
     //MARK: PickerView DataSource & Delegate
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
