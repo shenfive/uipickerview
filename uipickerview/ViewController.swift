@@ -12,7 +12,9 @@ class ViewController: UIViewController, UIPickerViewDataSource{
 
 
     @IBOutlet weak var pickerView: UIPickerView!
-    
+    var astrological = ["請選擇你的星座","白羊宮","金牛宮","雙子宮","巨蟹宮","獅子宮","處女宮","天秤宮","天蠍宮","射手宮","摩羯宮","水瓶宮","雙魚宮"]
+    var bloudType = ["請選擇你的血型","A","B","O","AB"]
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,17 +24,15 @@ class ViewController: UIViewController, UIPickerViewDataSource{
 
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 3
+        return 2
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         switch component {
         case 0:
-            return 3
+            return astrological.count
         case 1:
-            return 5
-        case 2:
-            return 4
+            return bloudType.count
         default:
             return 0
         }
