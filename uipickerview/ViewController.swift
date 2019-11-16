@@ -49,6 +49,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         }
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        performSegue(withIdentifier: "goPage2", sender: nil)
+        
         switch component {
         case 0:
             print( astrological[row])
