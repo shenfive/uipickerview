@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDataSource{
+class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
 
 
     @IBOutlet weak var pickerView: UIPickerView!
@@ -19,10 +19,12 @@ class ViewController: UIViewController, UIPickerViewDataSource{
     override func viewDidLoad() {
         super.viewDidLoad()
         pickerView.dataSource = self
+        pickerView.delegate = self
  
     }
 
     
+    //MARK: PickerView DataSource & Delegate
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 2
     }
@@ -35,6 +37,16 @@ class ViewController: UIViewController, UIPickerViewDataSource{
             return bloudType.count
         default:
             return 0
+        }
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        switch component {
+        case 0:
+            return astrological[row]
+        case 1:
+            return bloudType[row]
+        default:
+            return nil
         }
     }
     
