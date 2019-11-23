@@ -31,6 +31,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         print("will appear")
         pickerView.selectRow(0, inComponent: 0, animated: false)
         pickerView.selectRow(0, inComponent: 1, animated: false)
+        selectedAst = nil
+        selectedBloud = nil
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
