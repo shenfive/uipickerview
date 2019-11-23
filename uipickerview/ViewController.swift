@@ -25,8 +25,16 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         pickerView.delegate = self
  
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("will appear")
+        pickerView.selectRow(0, inComponent: 0, animated: false)
+        pickerView.selectRow(0, inComponent: 1, animated: false)
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         let nextVC = segue.destination as! SPViewController
         nextVC.ast = selectedAst ?? ""
         nextVC.bld = selectedBloud ?? ""
@@ -87,6 +95,12 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
     }
     
+    @IBAction func resetAction(_ sender: Any) {
+        pickerView.selectRow(0, inComponent: 0, animated: true)
+        pickerView.selectRow(0, inComponent: 1, animated: true)
+        selectedAst = nil
+        selectedBloud = nil
+    }
     
 }
 
